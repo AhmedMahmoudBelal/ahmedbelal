@@ -1,0 +1,42 @@
+
+package gaameegcd;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author hassan
+ */
+public class Gaameegcd {
+
+    public static double gcd(double n5,double n6){
+       if(n6==0)
+           return n5;
+       else
+           return gcd(n6, n5 % n6);
+
+   }
+
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner scan = new Scanner(System.in);
+         System.out.println("Ent two num GCD ");
+        int n5=scan.nextInt();
+        int n6=scan.nextInt();
+         System.out.println("gcd:" + gcd(n5 , n6));
+         Scanner ssc= new Scanner(System.in);
+        System.out.println(" Ent name player will play first");
+        String t1= ssc.next();
+        System.out.println(" Ent name player will play second");
+        String t2= ssc.next();
+
+
+        if(n5/gcd(n5, n6)%2!=0){
+            System.out.println("player win" + t1);
+        }
+        else
+        System.out.println(" player win:" + t2);
+    }
+
+}
